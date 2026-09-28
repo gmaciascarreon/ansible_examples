@@ -1,0 +1,3 @@
+---
+nginx_worker_connections: 1024
+nginx_listen_port: 80
