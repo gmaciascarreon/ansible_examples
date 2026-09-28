@@ -28,6 +28,6 @@
 
 - name: Instalar llave privada
   ansible.builtin.copy:
-    content: "{{ lookup('env', 'TLS_KEY') }}\n"
+    content: "{{ lookup('env', 'TLS_KEY') | b64decode }}\n"
     dest: /home/ec2-user/api.key
     mode: "0600"
