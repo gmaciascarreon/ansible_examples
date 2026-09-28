@@ -1,6 +1,6 @@
 ---
 - name: Configure webservers
-  hosts: webservers
+  hosts: all
   become: true
   roles:
     - webserver

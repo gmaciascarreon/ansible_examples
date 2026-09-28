@@ -1,5 +1,7 @@
 This repo is to create ansible examples
-Set upt TLS_KEY
 
-export TLS_KEY = ""
+
+
+source /home/ec2-user/.venv/bin/activate 
+export TLS_KEY=$(base64 -w0 /home/ec2-user/ansible_examples/demo.cer)
 ansible-playbook Test_create_files/site.yml
